@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -7,10 +8,10 @@ const port = process.env.PORT || 3000;
 app.use(express.static('public'));
 
 // Provide access to node_modules folder
-app.use('/scripts', express.static(`${__dirname}/node_modules/`));
+app.use('/scripts', express.static(path.join(__dirname + '/node_modules/')));
 
 // Redirect all traffic to index.html
-app.use((req, res) => res.sendFile(`${__dirname}/public/index.html`));
+app.use((req, res) => res.sendFile(path.join(__dirname + "/public/index.html")));
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console
