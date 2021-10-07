@@ -1,10 +1,9 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/node"          
-        }
+    "builds": [        
+            {"src":"**/*.js","use":"@now/node"},
+            {"src":"public/**/*","use":"@now/static"}
+          
     ],
     "routes": [
         {
