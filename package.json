@@ -2,8 +2,12 @@
   "name": "simplewebrtc-messenger",
   "version": "1.0.0",
   "description": "Simple WebRTC Messenger",
+  "main": "server.js",
+  "engines":{
+    "nodejs": "14.x"
+  },
   "scripts": {
-    "start": "node api/server.js"
+    "start": "node server.js"
   },
   "keywords": [
     "WebRTC"
